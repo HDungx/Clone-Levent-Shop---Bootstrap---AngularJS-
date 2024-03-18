@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: lighter;
+
+}
+
+.container {
+    max-width: 100%;
+}
+
+#bell-list {
+    font-weight: lighter;
+    font-size: small;
+    color: grey;
+}
+
+.dropdown-item {
+    font-weight: lighter;
+    left: 0;
+    color: grey;
+}
+
+.size label {
+    margin-right: 10px;
+}
+
+#dropdown-bell{
+    position: absolute;
+    top:40px;
+    right: 10px;
+}
+.dsSP+div{
+    display: none;
+}
+.dsSP:empty+div{
+    display: block;
+}
+
+input.ng-invalid{
+    background-image: url('image/attention.png');
+    background-position:right;
+    background-repeat: no-repeat;
+}

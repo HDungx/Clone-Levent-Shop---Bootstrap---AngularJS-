@@ -1,0 +1,232 @@
+[
+    {
+        "id": 1,
+        "name": "LEVENTS® CLASSIC REGULAR POLO/BLACK",
+        "price": 420000,
+        "img": [
+            "a1",
+            "a1a",
+            "a1b",
+            "a1c",
+            "a1d"
+        ],
+        "color": "Black",
+        "material": "Pique"
+    },
+    {
+        "id": 2,
+        "name": "LEVENTS® CLASSIC REGULAR POLO/WHITE",
+        "price": 420000,
+        "img": [
+            "a2",
+            "a2a",
+            "a2b",
+            "a2c",
+            "a2d"
+        ],
+        "color": "White",
+        "material": "Pique"
+    },
+    {
+        "id": 3,
+        "name": "LEVENTS® CLASSIC SWEATER/BLUE",
+        "price": 420000,
+        "img": [
+            "a3",
+            "a3a",
+            "a3b",
+            "a3c",
+            "a3d"
+        ],
+        "color": "Blue",
+        "material": "Nỉ"
+    },
+    {
+        "id": 4,
+        "name": "LEVENTS® CLASSIC STRIPED LONG SLEEVE SHIRT/BLUE",
+        "price": 490000,
+        "img": [
+            "a4",
+            "a4a",
+            "a4b",
+            "a4c",
+            "a4d"
+        ],
+        "color": "Blue",
+        "material": "Nỉ"
+    },
+    {
+        "id": 5,
+        "name": "LEVENTS® CLASSIC REGULAR TEE/WHITE",
+        "price": 490000,
+        "img": [
+            "a5",
+            "a5a",
+            "a5b",
+            "a5c"
+        ],
+        "color": "White",
+        "material": "Cotton"
+    },
+    {
+        "id": 6,
+        "name": "LEVENTS® CLASSIC REGULAR TEE/BLACK",
+        "price": 370000,
+        "img": [
+            "a6",
+            "a6a",
+            "a6b",
+            "a6c"
+        ],
+        "color": "Black",
+        "material": "Lì ven Original 2.0"
+    },
+    {
+        "id": 7,
+        "name": "LEVENTS® CLASSIC REGULAR POLO/BLACK",
+        "price": 450000,
+        "img": [
+            "a7",
+            "a7a",
+            "a7b",
+            "a7c"
+        ],
+        "color": "Black",
+        "material": "Lì ven Original 2.0"
+    },
+    {
+        "id": 8,
+        "name": "LEVENTS® CLASSIC ZIPPER HOODIE/BLACK",
+        "price": 500000,
+        "img": [
+            "a8",
+            "a8a",
+            "a8b",
+            "a8c",
+            "a8d"
+        ],
+        "color": "Black",
+        "material": "Nỉ"
+    },{
+        "id": 9,
+        "name": "LEVENTS® PLAY LOGO CARDIGAN",
+        "price": 512000,
+        "img": [
+            "a10",
+            "a10a",
+            "a10b",
+            "a10c"
+        ],
+        "color": "Black",
+        "material": "Nỉ"
+    },{
+        "id": 10,
+        "name": "LEVENTS® | DORAEMON KNIT SWEATER",
+        "price": 590000,
+        "img": [
+            "a11",
+            "a11a",
+            "a11b",
+            "a11c"
+        ],
+        "color": "White",
+        "material": "Len"
+    },{
+        "id": 11,
+        "name": "LEVENTS® | ANIMALS HOODIES",
+        "price": 700000,
+        "img": [
+            "a9",
+            "a9a",
+            "a9b",
+            "a9c",
+            "a9d"
+        ],
+        "color": "White",
+        "material": "Len"
+    },{
+        "id": 12,
+        "name": "LEVENTS® STRIPE POLO",
+        "price": 400000,
+        "img": [
+            "a12",
+            "a12a",
+            "a12b",
+            "a12c"
+        ],
+        "color": "White",
+        "material": "LÌ VEN FABRIC"
+    },{
+        "id": 13,
+        "name": "LEVENTS® STRIPE POLO",
+        "price": 200000,
+        "img": [
+            "a1",
+            "a12a",
+            "a12b",
+            "a12c"
+        ],
+        "color": "White",
+        "material": "LÌ VEN FABRIC"
+    },{
+        "id": 14,
+        "name": "LEVENTS® STRIPE POLO",
+        "price": 150000,
+        "img": [
+            "a2",
+            "a12a",
+            "a12b",
+            "a12c"
+        ],
+        "color": "White",
+        "material": "LÌ VEN FABRIC"
+    },{
+        "id": 15,
+        "name": "LEVENTS® STRIPE POLO",
+        "price": 320000,
+        "img": [
+            "a3",
+            "a12a",
+            "a12b",
+            "a12c"
+        ],
+        "color": "White",
+        "material": "LÌ VEN FABRIC"
+    },{
+        "id": 16,
+        "name": "LEVENTS® STRIPE POLO",
+        "price": 390000,
+        "img": [
+            "a4",
+            "a12a",
+            "a12b",
+            "a12c"
+        ],
+        "color": "White",
+        "material": "LÌ VEN FABRIC"
+    },{
+        "id": 17,
+        "name": "LEVENTS® STRIPE POLO",
+        "price": 270000,
+        "img": [
+            "a5",
+            "a12a",
+            "a12b",
+            "a12c"
+        ],
+        "color": "White",
+        "material": "LÌ VEN FABRIC"
+    },{
+        "id": 18,
+        "name": "LEVENTS® STRIPE POLO",
+        "price": 900000,
+        "img": [
+            "a6",
+            "a12a",
+            "a12b",
+            "a12c"
+        ],
+        "color": "White",
+        "material": "LÌ VEN FABRIC"
+    }
+]

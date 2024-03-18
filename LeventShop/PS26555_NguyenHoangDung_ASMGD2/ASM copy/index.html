@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levents</title>
+  <link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/114c243023.js" crossorigin="anonymous"></script>
+  <script src="bootstrap-5.3.1-dist/angular.min.js"></script>
+  <script src="bootstrap-5.3.1-dist/angular-route.min.js"></script>
+  <script src="bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body ng-app="myapp" ng-controller="myCtrl">
+  <div class="container">
+    <div class="row text-center text-bg-dark text-lg-center"
+      style="height: 40px;padding-top: 7px; font-weight: lighter;">
+      <p>LEVENTS LOVE YOU 💙</p>
+    </div>
+    <div class="row sticky-top">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary pt-2 border-bottom">
+        <div class="container">
+          <div class="col-4"><button class="navbar-toggler float-start border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+            <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <div class="col-4 text-center"> <a href=" #!home" class="nav-item ms-auto me-auto text-center"><img
+                src="image/logo (1).png" alt=""></a>
+          </div>
+          <div class="col-4">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 list-group-horizontal justify-content-end pt-2">
+              <li class="nav-item dropdown pe-4 dropstart">
+                <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-regular fa-bell position-relative "><span
+                      class="position-absolute bottom-0 start-100 translate-middle-x badge rounded-end-circle bg-secondary"
+                      style="font-size: 7px;">4</span></i>
+                </a>
+                <ul class="dropdown-menu" id="dropdown-bell">
+                  <li><a class="dropdown-item" id="bell-list" href="">NEW ARRIVAL - LEVENTS® PASSION REGULAR TEE 💙</a>
+                  </li>
+                  <li><a class="dropdown-item" id="bell-list" href="">ƯU ĐÃI LÊN ĐẾN 30% DÀNH RIÊNG CHO BẠN TRONG THÁNG
+                      9
+                      NÀY</a></li>
+                  <li><a class="dropdown-item" id="bell-list" href="">LEVENTS® STORE NGUYỄN TRÃI - COMING SOON</a></li>
+                  <li><a class="dropdown-item" id="bell-list" href="">FREESHIP CHO HÓA ĐƠN TỪ 1.000.000</a></li>
+                </ul>
+              </li>
+              <li class="nav-item pe-4">
+                <a href="" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+              </li>
+              <li class="nav-item pe-4" ng-controller="ThanhToanCtrl"><a href="#!thanhtoan" class="nav-link"><i
+                    class="fa-solid fa-bag-shopping position-relative"><span
+                      class="position-absolute bottom-0 start-100 translate-middle-x badge rounded-end-circle bg-secondary"
+                      style="font-size: 7px;">{{tongSP()}}</span></i></a></li>
+
+              <li class="nav-item pe-4">
+                <a href="#!login" class="nav-link"><i class="fa-regular fa-circle-user"></i></a>
+              </li>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <p>Try scrolling the rest of the page to see this option in action.</p>
+      </div>
+    </div>
+    <div class="row " style="height: 50px; padding-top: 13px; font-weight: lighter;color: grey;font-size: 15px;"
+      ng-hide="isSmallScreen()">
+      <div class="d-flex justify-content-between text-center">
+        <a href="" class="nav-link">About us</a>
+        <li class="nav-item dropdown " style="list-style-type: none;">
+          <a class="nav-link dropdown-toggle" href="#!cuahang" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Cửa hàng
+          </a>
+          <ul class="dropdown-menu rounded-0 border-0">
+            <li><a class="dropdown-item" href="#!cuahang"">Tất cả</a></li>
+            <li><a class=" dropdown-item" href="">Sản phẩn mới</a></li>
+            <li><a class="dropdown-item" href="">Áo</a></li>
+            <li><a class="dropdown-item" href="">Quần</a></li>
+            <li><a class="dropdown-item" href="">Phụ kiện</a></li>
+          </ul>
+        </li>
+        <a href="" class="nav-link">Giảm giá</a>
+        <a href="" class="nav-link">Bộ sưu tập</a>
+        <a href="" class="nav-link">Bộ phối</a>
+        <li class="nav-item dropdown" style="list-style-type: none;">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Bài viết
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="">Xu hướng thời trang</a></li>
+            <li><a class="dropdown-item" href="">Kiến thức thời trang</a></li>
+          </ul>
+        </li>
+        <a href="" class="nav-link">Liên hệ</a>
+        <li class="nav-item dropdown" style="list-style-type: none;">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Chăm sóc Khách hàng
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="">Mua hàng dễ dàng</a></li>
+            <li><a class="dropdown-item" href="">Lì ven Fabric</a></li>
+            <li><a class="dropdown-item" href="">Chính sách trao đổi dễ dàng</a></li>
+          </ul>
+        </li>
+        <a href="" class="nav-link">Tuyển dụng</a>
+      </div>
+    </div>
+
+
+
+    <ng-view></ng-view>
+
+
+
+    <footer>
+      <div class="row pt-5">
+        <div class="col-6 mt-5">
+
+          <div class="container" style="font-weight: lighter;">
+            <h5>VỀ CHÚNG TÔI</h5>
+            <br>
+            <p>Levents® – Share your color with the world</p>
+            <br>
+            HỘ KINH DOANH Red Label
+            <br>
+            GPKD được cấp bởi Cục Cảnh sát QLHC & TTXH
+            <br>
+            Trụ sở hộ kinh doanh: 842 Sư Vạn Hạnh, Phường 13, Quận 10, Tp. Hồ Chí Minh
+            <br>
+            Mä só thuê: 41J8031547
+            <br>
+            Ngày cấp: 06/07/2021
+            <br>
+            Người đại diện: Nguyễn Trần Duy Khiết
+            <br>
+            Mã Số thuế cá nhân: 8748861448-001
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="row me-2" style="font-size:14px;">
+            <div class="col-3 pt-5">
+              <ul class="list-group pb-4">
+                <li class="list-group-item border-0">
+                  <h6>LIÊN HỆ</h6>
+                </li>
+                <li class="list-group-item border-0">Hotline <br><strong>1900 633 028</strong></li>
+                <li class="list-group-item border-0">Email <br><strong>Customercare@levents.as<br>ia</strong></li>
+                <li class="list-group-item border-0">Thứ 2 - Chủ nhật <br><strong>9:30 ~ 21:30</strong></li>
+                <li class="list-group-item border-0 ">Email liên hệ <br> <strong>business@levents.asia</strong></li>
+              </ul>
+            </div>
+            <div class="col-3 pt-5">
+              <ul class="list-group pb-4">
+                <li class="list-group-item border-0">
+                  <h6>DANH MỤC SẢN PHẨM</h6>
+                </li>
+                <li class="list-group-item border-0">Tất cả</li>
+                <li class="list-group-item border-0">New arrival</li>
+                <li class="list-group-item border-0">Áo</li>
+                <li class="list-group-item border-0">Quần</li>
+                <li class="list-group-item border-0">Phụ kiện</li>
+              </ul>
+            </div>
+            <div class="col-3 pt-5">
+              <ul class="list-group pb-4">
+                <li class="list-group-item border-0">
+                  <h6>HỖ TRỢ</h6>
+                </li>
+                <li class="list-group-item border-0">LÌ VEN FABRIC</li>
+                <li class="list-group-item border-0">Tài khoản</li>
+                <li class="list-group-item border-0">Chính sách vận chuyển</li>
+                <li class="list-group-item border-0">Thanh toán trực tuyến</li>
+                <li class="list-group-item border-0">Chính sách bảo mật</li>
+              </ul>
+            </div>
+            <div class="col-3 pt-5">
+              <ul class="list-group pb-4">
+                <li class="list-group-item border-0">
+                  <h6>CỬA HÀNG</h6>
+                </li>
+                <li class="list-group-item border-0">139E Nguyễn Trãi, Phường Phạm Ngũ Lão, Quận 1, HCM - COMING SOON
+                </li>
+                <li class="list-group-item border-0">842 Sư Vạn Hạnh, Phường 12, Quận 10, HCM</li>
+                <li class="list-group-item border-0">The New Playground, 04, Quận 1, HCM</li>
+                <li class="list-group-item border-0">54, Mậu Thân, Phường Xuân Khánh, Quận Ninh Kiều, Cần Thơ</li>
+                <li class="list-group-item border-0"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

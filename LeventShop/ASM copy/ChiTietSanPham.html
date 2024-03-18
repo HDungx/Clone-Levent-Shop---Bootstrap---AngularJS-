@@ -1,0 +1,148 @@
+<div class="row mb-3 p-1">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="font-weight: bold;font-size: small;">
+            <li class="breadcrumb-item"><a href="#!home" style="text-decoration: none;color: black;">Trang
+                    chủ</a></li>
+            <li class="breadcrumb-item"><a href="#!cuahang" style="text-decoration: none;color: black;">Cửa
+                    hàng</a></li>
+            <li class="breadcrumb-item active" aria-current="page" style="font-weight: bold;">Cửa hàng Chi tiết
+                sản phẩm</li>
+        </ol>
+    </nav>
+</div>
+<div class="row">
+    <div class="col-6">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <img src="image/{{sanpham.img[0]}}.jpg" style="width: 100px; height: 100px;" class="active"
+                    data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0">
+                <img src="image/{{sanpham.img[1]}}.jpg" style="width: 100px; height: 100px;"
+                    data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1">
+                <img src="image/{{sanpham.img[2]}}.jpg" style="width: 100px; height: 100px;"
+                    data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2">
+                <img src="image/{{sanpham.img[3]}}.jpg" style="width: 100px; height: 100px;"
+                    data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3">
+                <img src="image/{{sanpham.img[4]}}.jpg" style="width: 100px; height: 100px;"
+                    data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4">
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="image/{{sanpham.img[0]}}.jpg" class="d-block w-100" style="width: 800px; height: 800px;"
+                        alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/{{sanpham.img[1]}}.jpg" class="d-block w-100" style="width: 800px; height: 800px;"
+                        alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/{{sanpham.img[2]}}.jpg" class="d-block w-100" style="width: 800px; height: 800px;"
+                        alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/{{sanpham.img[3]}}.jpg" class="d-block w-100" style="width: 800px; height: 800px;"
+                        alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/{{sanpham.img[4]}}.jpg" class="d-block w-100" style="width: 800px; height: 800px;"
+                        alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="col-6" ng-controller="addcart">
+        <form class="mb-5">
+            <div class="title mt-4 mb-4" style="font-weight: bolder; font-size:large;">{{sanpham.name}}
+            </div>
+            <div class="prize fs-4 mb-4">{{sanpham.price}}<span>vnđ</span></div>
+            <div class="item-color mb-5">
+                <span>Màu sắc: {{sanpham.color}}</span> <br>
+                <img src="image/{{sanpham.img[0]}}.jpg" class="img-thumbnail rounded-0 mt-2"
+                    style="width: 60px;height: 60px;">
+            </div>
+            <div class="size mb-5">
+                <input type="radio" class="btn-check" name="options-base" id="Size1" autocomplete="off" checked>
+                <label class="btn rounded-0 fw-lighter " for="Size1">SIZE 1</label>
+                
+            </div>
+            <div class="add-cart">
+                <button type="button" class="btn rounded-0" style="background-color:#474747; width:200px;color: white;"
+                    ng-click="mua(sanpham)">Thêm vào giỏ</button>
+            </div>
+        </form>
+        <div class="accordion " id="accordionPanelsStayOpenExample">
+            <div class="accordion-item border-0 border-bottom">
+                <h2 class="accordion-header border-bottom">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        <span class="fw-bold">Thông tin</span>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body ">
+                        {{sanpham.name}} <br> <br>
+
+                        Color: {{sanpham.color}} <br> <br>
+
+                        Material: {{sanpham.material}} <br>
+                        Size: 1/2/3/4 <br> <br>
+
+                        Đây là sản phẩm thuộc dòng sản phẩm mới chưa từng có từ trước đến nay – LEVENTS® CLASSIC.
+                        LEVENTS® CLASSIC với mục tiêu trở thành dòng sản phẩm “EVERY WEAR” là sự kết hợp tinh tế giữa
+                        thiết kế đơn giản, hiện đại và form dáng cổ điển, tập trung về chất liệu và màu sắc đa dạng. <br>
+                        Hứa hẹn mang đến những item thoải mái để bạn tự tin thể hiện cá tính, phù hợp với mọi hoạt động
+                        dạo phố hàng ngày.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item border-0">
+                <h2 class="accordion-header border-bottom">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        <span class="fw-bold">Bảng size</span>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Sản phẩm được may theo thông số tiêu chuẩn tương đối của người Việt Nam. Nếu bạn đang
+                        cân nhắc giữa hai kích cỡ, nên chọn kích cỡ lớn hơn. <br> <br>
+
+                        Kích cỡ 1: Chiều cao từ 1m50 – 1m65, cân nặng trên 55kg <br>
+                        Kích cỡ 2: Chiều cao từ 1m65 – 1m72, cân nặng dưới 65kg <br>
+                        Kích cỡ 3: Chiều cao từ 1m70 – 1m77, cân nặng dưới 80kg <br>
+                        Kích cỡ 4: Chiều cao trên 1m72, cân nặng dưới 95kg. <br>
+                        <img src="image/Website-Regular-Tee-3-300x140.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item border-0">
+                <h2 class="accordion-header border-bottom">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThree">
+                        <span class="fw-bold">Quy định đổi trả</span>
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Nhằm mang lại cho bạn sự tiện lợi và những trải nghiệm tuyệt vời khi mua hàng, tụi mình
+                        đã phát triển dịch vụ đổi hàng tận nơi và chính sách bảo hành. <br> <br>
+
+                        Tham khảo thêm thông tin về chính sách <a href="">tại đây</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

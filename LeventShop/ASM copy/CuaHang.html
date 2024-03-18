@@ -1,0 +1,39 @@
+<div class="row mb-3 p-1">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="font-weight: bold;font-size: small;">
+            <li class="breadcrumb-item"><a href="#!home" style="text-decoration: none;color: black;">Trang
+                    chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page" style="font-weight: bold;">Cửa hàng</li>
+        </ol>
+    </nav>
+</div>
+<div class="row">
+    <div class="col-6 mb-4">
+        <a class="icon-link icon-link-hover"
+            style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);text-decoration: none; color: black;" href="">
+            <i class="fa-solid fa-filter bi" aria-hidden="true"></i> <input type="text" ng-model="timkiem"
+                class="form-control rounded-0" placeholder="Tìm kiếm theo tên">
+        </a>
+    </div>
+    <div class="col-6 text-end">
+        <div class="row justify-content-end">
+            Lọc bởi
+
+            <select class=" w-25 ms-3" aria-label="Default select example" ng-model="order">
+                <option disabled selected value="">Lọc bởi</option>
+                <option value="price">Giá từ thấp đến cao</option>
+                <option value="-price">Giá từ cao đến thấp</option>
+                <option value="name">Phổ biến</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="row row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-1 dsSP"><div class="col" ng-repeat="sp in listSP| filter : timkiem : false | orderBy:order | limitTo : limit"><div class="card border-0" style="background-color: aqua;"><a href="#!chitietSP/{{sp.id}}" class="d-block"><img src="image/{{sp.img[0]}}.jpg" alt="" class="w-100"></a></div><p><a href="#!chitietSP/{{sp.id}}" class="link-opacity-100-hover"style="text-decoration: none; color: grey; font-weight:lighter;">{{sp.name}}</a></p><p style="color: grey;">{{sp.price}}vnđ</p></div></div>
+<div class="alert">Không tìm thấy</div>
+<div class="row justify-content-center">
+    <button type="button" class="btn rounded-0" style="background-color:#474747; width:200px;color: white;" ng-click="showMore()">Xem
+        thêm</button>
+</div>
+<div class="row">
+    <img src="image/1920x760-1920x988.png" alt="">
+</div>

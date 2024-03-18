@@ -1,0 +1,123 @@
+<div class="row mb-3 p-1">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb" style="font-weight: bold;font-size: small;">
+            <li class="breadcrumb-item"><a href="#!home" style="text-decoration: none;color: black;">Trang
+                    chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page" style="font-weight: bold;">Thanh toán</li>
+        </ol>
+    </nav>
+</div>
+<div class="row row-cols-lg-2 row-cols-1">
+    <div class="col pe-5">
+        <form name="chkValid" ng-submid="submitForm()">
+            <h6 class="mb-4">THÔNG TIN GIAO HÀNG</h6>
+            <span>Bạn đã có tài khoản? <a href="#!login" style="text-decoration: none;">Đăng nhập</a></span>
+            <div class="col-sm-12 mt-4">
+                <input type="text" class="form-control border-0 border-bottom rounded-0 fw-lighter ps-0"
+                    placeholder="Họ và tên" ng-model="name" name="name" maxlength="40" required>
+            </div>
+            <div class="row mt-4">
+                <div class="col-sm-6">
+                    <input type="email" class="form-control border-0 border-bottom rounded-0 fw-lighter ps-0"
+                        placeholder="Email" ng-model="email" name="email" >
+                </div>
+                <div class="col-sm-6">
+                    <input type="number" class="form-control border-0 border-bottom rounded-0 fw-lighter ps-0"
+                        placeholder="Số điện thoại" ng-model="sdt" name="sdt" ng-pattern="/^[0-9]{10}$/" required>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-4">
+                    <input type="date" class="form-control border-0 border-bottom rounded-0 fw-lighter ps-0"
+                        placeholder="Ngày sinh">
+                </div>
+                <div class="col-8">
+                    <input type="text" class="form-control border-0 border-bottom rounded-0 fw-lighter ps-0"
+                        placeholder="Địa chỉ" ng-model="address" name="address" required>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-4">
+                    <select class="form-select border-0 border-bottom rounded-0 fw-lighter ps-0"
+                        ng-model="tpOptions" name="tpOptions" required>
+                        <option disabled selected value="">Chọn Tỉnh/Thành phố*</option>
+                        <option value="1">Hà Nội</option>
+                        <option value="2">Hồ Chí Minh</option>
+                        <option value="3">Đà Nẵng</option>
+                    </select>
+                    <!-- <span ng-show="showError">Chưa chọn Tỉnh/Thành Phố</span> -->
+                </div>
+                <div class="col-4">
+                    <select class="form-select border-0 border-bottom rounded-0 fw-lighter ps-0"
+                        ng-model="qOptions" name="qOptions" required>
+                        <option disabled selected value="">Chọn Quận/Huyện</option>
+                        <option value="1">Cầu Giấy</option>
+                        <option value="2">Quận 12</option>
+                        <option value="3">Quận Hải Châu</option>
+                    </select>
+                    <!-- <span ng-show="chkValid.qOptions.$invalid">Chưa chọn Quận/Huyện</span> -->
+                </div>
+                <div class="col-4">
+                    <select class="form-select border-0 border-bottom rounded-0 fw-lighter ps-0"
+                        ng-model="pOptions" name="pOptions" required>
+                        <option disabled selected value="">Chọn Phường*</option>
+                        <option value="1">Cầu Giấy</option>
+                        <option value="2">Quận 12</option>
+                        <option value="3">Quận Hải Châu</option>
+                    </select>
+                    <!-- <span ng-show="chkValid.pOptions.$invalid">Chưa chọn Phường</span> -->
+                </div>
+            </div>
+            <button class="btn border-danger rounded-0 float-end mt-5 w-25"
+                style="background-color: #474747; color: white;"> Tiếp tục</button>
+        </form>
+    </div>
+    <div class="col ps-5">
+        <form>
+            <h6 class="mb-5">GIỎ HÀNG</h6>
+            <div class="row mb-4" ng-repeat="item in giohang track by $index">
+                <div class="cart-item mb-4">
+                    <div class="card border-0">
+                        <div class="row g-0">
+                            <div class="col-md-2">
+                                <img src="image/{{item.img[0]}}.jpg" style="width: 110px;height: 110px;">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-title">{{item.name}} <a href="" class="float-end link-body-emphasis text-decoration-none" ng-click="xoa(item.id)"><span>X</span></a></div>
+                                <div class="mb-2">Size 1</div>
+                                <div><span>x {{item.soluong}}</span> <div class="float-end"><span>{{item.price * item.soluong}}</span> vnđ</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row mt-4 mb-4">
+                <div class="col-9">
+                    <input type="text" class="form-control border-0 border-bottom rounded-0 fw-lighter ps-0"
+                        placeholder="Mã giảm giá">
+                </div>
+                <div class="col-3">
+                    <button class="btn form-control rounded-0" style="background-color: #474747; color: white;">Sử
+                        dụng</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="prices border-top border-bottom pt-4 pb-4 mt-4">
+                    <span>Tạm tính</span>
+                    <div class="prices-group float-end">
+                        <span>{{tinhTongTien()}} </span> <span>vnđ</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 mb-4">
+                <div class="tongtien fw-bold">
+                    Tổng
+                    <div class="prices-group float-end fw-bolder">
+                        <span> {{tinhTongTien()}} </span> <span>vnđ</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
